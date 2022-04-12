@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!--
+Project name(项目名称)：vue_v-on
+  File name(文件名): test1
+  Authors(作者）: mao
+  Author QQ：1296193245
+  GitHub：https://github.com/maomao124/
+  Date(创建日期)： 2022/4/12
+  Time(创建时间)： 21:22
+  Description(描述)： 无
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click="button1">按钮1</button>
+    <input type="button" v-on:click="button1" value="按钮1">
+    <input type="button" v-on:click="button2" value="按钮2">
+    <input type="button" @click="button2" value="按钮2">
+    <input type="button" @dblclick="button3" value="双击按钮3">
+</div>
+
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            number: 1
+        },
+        methods: {
+            button1: function ()
+            {
+                alert("按下按钮1")
+            }
+            ,
+            button2: function ()
+            {
+                alert("按下按钮2")
+            },
+
+            button3: function ()
+            {
+                alert("双击按钮3")
+            }
+
+        }
+    })
+</script>
+</body>
+</html>
